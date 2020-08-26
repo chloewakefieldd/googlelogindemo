@@ -17,8 +17,7 @@ function getPlugins() {
       }
     }),
     new HtmlWebpackPlugin({
-      title:
-        'AppTitle',
+      title: 'AppTitle',
       template: 'src/views/main.html',
       favicon: 'src/static/favicon.png',
       filename: 'main.html'
