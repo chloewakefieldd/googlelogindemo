@@ -6,11 +6,6 @@
     "sourceMap": true,
     "jsx": "preserve",
     "resolveJsonModule": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "allowJs": true,
-    "checkJs": false,
-    "noImplicitAny": false,
-    "allowSyntheticDefaultImports": true
+    "noEmit": true
   }
 }
