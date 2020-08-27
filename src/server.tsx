@@ -12,6 +12,9 @@ const app = express();
 // for IBM cloud
 app.enable('trust proxy');
 
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
 function handleRender(req, res): void {
   const html = renderToString(<App />);
 
@@ -44,5 +47,9 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 app.get('/', handleRender);
 app.get('*', handle404);
+
+app.post('/', function (req: any, res) {
+  console.log("START req", req.body);
+});
 
 app.listen(port, () => console.log(`listening on port ${port}`));
